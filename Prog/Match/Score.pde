@@ -21,6 +21,14 @@ class Score{
     return _highScore;
   }
   
+  public int getPassage(int i){
+    return _Npassage[i];
+  }
+  
+  public int getNPassage(){
+    return _passage;
+  }
+  
   public String getTeamName(){
     return _name;
   }
@@ -46,8 +54,16 @@ class Score{
     _city = city;
   }
   
+  public void setPassage(int i, int score){
+    _passage[i] = passage;
+  }
+  
   int _id;
   long _highScore;
   String _city;
-  String _name;  
+  String _name;
+  int _Npassage;
+  int[] _passsage;
+  
+  
 };

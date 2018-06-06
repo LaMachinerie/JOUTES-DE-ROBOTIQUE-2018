@@ -3,8 +3,10 @@ import netP5.*;
 
 
 public enum Error{
+ VALIDATE(0),
  DATAERROR(1),
- PATTERNERROR(2);
+ PATTERNERROR(2),
+ VALUEERROR(3);
  
   private Error(int _id){
     id = _id;
@@ -67,8 +69,21 @@ void oscEvent(OscMessage messageEntrant) {
     if (messageEntrant.typetag().equals("i") == true) {
   
       int arg0 = messageEntrant.get(0).intValue();
+      sendError(Error.VALIDATE.id());
       
       println("info :" + arg0);
+      
     }else sendError(Error.DATAERROR.id());
+  }else if(messageEntrant.addrPattern().equals("/value") == true) {
+    if (messageEntrant.typetag().equals("i") == true) {
+        
+      
+      sendError(Error.VALIDATE.id());
+      int arg0 = messageEntrant.get(0).intValue();
+      
+      println("info :" + arg0);
+      
+      
+    }else sendError(Error.VALUEERROR.id());
   }else sendError(Error.PATTERNERROR.id());
 }

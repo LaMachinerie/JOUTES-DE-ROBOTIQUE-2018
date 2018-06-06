@@ -43,11 +43,40 @@ class HoloDisplay{
     _loc = Location.FLYING;
   }
   
+  HoloDisplay(int posX, int posY, Location loc){
+    _posX = posX;
+    _posY = posY;
+    _opacity = opacity;
+    _backColor = color(255);
+    _isVisible = true;
+    _loc = loc;
+  }
+  
+  HoloDisplay(int posX, int posY, Location loc , int opacity = 255){
+    _posX = posX;
+    _posY = posY;
+    _opacity = opacity;
+    _backColor = color(255);
+    _isVisible = true;
+    _loc = loc;
+  }
+  
+  HoloDisplay(int posX, int posY, Location loc , int opacity = 255, color backcolor = 255, isVisible = true){
+    _posX = posX;
+    _posY = posY;
+    _opacity = opacity;
+    _backColor = backColor;
+    _isVisible = isVisible;
+    _loc = loc;
+  }
+  
 //#####Method#####
   
   
   //Opening code goes here
-  public void open(){}
+  public void open(){
+  
+  }
   
   //Hidding code goes here 
   public void hide(){}
@@ -58,6 +87,8 @@ class HoloDisplay{
   
 //#####Attribut#####
   int _posX, _posY, _opacity;
+  int fakePosX, fakePosY;
+  
   Location _loc;
   color _backColor;
   boolean _isVisible;
@@ -78,10 +109,10 @@ class HoloDisplay{
 
 
 
-class bottomBar extends HoloDisplay{
+class BottomBar extends HoloDisplay{
 //#####Constructor#####
   
-  bottomBar(){
+  BottomBar(){
     super();
     
     

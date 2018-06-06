@@ -54,23 +54,23 @@ void serialEvent(Serial Arduino) {
      char cmd = inString.charAt(0);
      switch(cmd){
         case 'D':
-          sendInfo(State.INIT);
           println("Demarrage");
           break;
         case 'P':
-          sendInfo(State.PREPARE);
+          //Afficher equipe
           //GUI Placer les robots
           println("Preparation");
           resetMatch();
           break;
         case 'G':
           //GO
-          sendInfo(State.START);
+          //Afficher départ
           println("Go !");
           break;
         case 'L':
         //Lap
-          sendInfo(4);
+          //Afficher lap
+          
           print("Tour n°");
           if(inString.charAt(0) == 'L'){
             String t = "";
@@ -85,7 +85,8 @@ void serialEvent(Serial Arduino) {
           }
           break;
         case 'F':
-          sendInfo(5);
+          //updateScore();
+          
           //Fin de match
           curTeam.setScore(minimum(Score));
           println("Highscore :" + curTeam.getScore());

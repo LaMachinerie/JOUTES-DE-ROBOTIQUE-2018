@@ -1,16 +1,12 @@
-int fps = 60;
+int fps = 30;
 
-
-void captureEvent(Capture video) {
-  video.read();
-}
 
 void setup() {  
-  size(1024, 576);
+  size(1600, 900);
   frameRate(fps);
   
   initCom();
-  initVideo();
+  //initVideo();
   initHUD();
 
 }
@@ -19,6 +15,6 @@ void setup() {
 
 void draw() {
   smooth();
-  video();
+  background(0);
   HUD();
 }

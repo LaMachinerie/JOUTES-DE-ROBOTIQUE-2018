@@ -7,10 +7,7 @@ void setup(){
   size(600, 400);
   
   Serial_init();
-  initCom();
   loadScore();
-  
-  
 }
 
 void resetMatch(){

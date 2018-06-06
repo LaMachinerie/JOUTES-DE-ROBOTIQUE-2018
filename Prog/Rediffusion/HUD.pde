@@ -1,5 +1,6 @@
 PFont myFont;
-
+ScoreBoard sc;
+BottomBar btb;
 
 
 void HUD(){
@@ -15,6 +16,9 @@ void HUD(){
 void initHUD(){
   //String[] fontList = PFont.list();
   //printArray(fontList);
+  btb = new BottomBar();
+  sc = new ScoreBoard();
+  
   myFont = createFont("Calibri", 26);
   textFont(myFont); 
 }

@@ -17,7 +17,11 @@ void loadScore() {
       temp.setId(children[i].getInt("id"));
       temp.setTeamName(children[i].getString("name"));
       temp.setCity(children[i].getString("city"));
-      temp.setScore(children[i].getInt("highScore"));
+      temp.setPassage(children[i].getInt("passage"));
+      
+      
+      XML childrenP = children[i].getChild("passage");
+      temp.setScore(childrenP.getInt("highScore"));
       println(temp.getId() + ": " + temp.getTeamName() + ", " + temp.getScore() + ", " + temp.getCity());
       scoreBoard.add(temp);
       
@@ -56,8 +60,9 @@ void saveScore(){
       newChild.setString("city", curTeam.getCity());
       newChild.setString("name", curTeam.getTeamName());
       newChild.setInt("id", curTeam.getId());
-      newChild.setLong("highScore", curTeam.getScore());
-      
+      XML secondChild = newChild.addChild("passage");
+        secondChild.setInt("passage", 1);
+        secondChild.setLong("highScore", curTeam.getScore());
       saveXML(xml, "data/score.xml");
   
       println("Score saved.");
