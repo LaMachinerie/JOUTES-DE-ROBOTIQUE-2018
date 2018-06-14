@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scoreBoard>
+  <player city="TEST" highScore="0" id="0" name="TEST" passage="0">
+  </player>
+  <player city="Amiens" highScore="21514" id="2" name="Sagebien 1" passage="1">
+    <passage score="21514" passage="1"/>
+  </player>
+  <player city="Amiens" highScore="20576" id="3" name="Sagebien 5" passage="2">
+    <passage score="20576" passage="1"/>
+	<passage score="20350" passage="2"/>
+  </player>
+  <player city="Amiens" highScore="20296" id="4" name="Sagebien 4" passage="3">
+    <passage score="20296" passage="1"/>
+	<passage score="21117" passage="2"/>
+    <passage score="17200" passage="3"/>
+  </player>
+  <player city="Amiens" highScore="15375" id="5" name="Sagebien 2" passage="4">
+    <passage score="15375" passage="1"/>
+    <passage score="16099" passage="2"/>
+	<passage score="13640" passage="3"/>
+    <passage score="15076" passage="4"/>
+  </player>
+  <player city="Amiens" highScore="17575" id="6" name="Sagebien 3" passage="1">
+    <passage score="17575" passage="1"/>
+  </player>
+  <player city="St Quentin" highScore="42000" id="7" name="chuppachups" passage="3">
+    <passage score="86337" passage="1"/>
+    <passage score="42000" passage="2"/>
+    <passage score="180000" passage="3"/>
+  </player>
+  <player city="Amiens" highScore="22600" id="8" name="IUT GMP Amiens 2" passage="1">
+    <passage score="22600" passage="1"/>
+  </player>
+</scoreBoard>
